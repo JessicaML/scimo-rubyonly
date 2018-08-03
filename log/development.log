@@ -29209,3 +29209,30 @@ Processing by CompletedLessonsController#show as HTML
 Completed 200 OK in 35ms (Views: 30.4ms | ActiveRecord: 0.5ms)
 
 
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-08-03 10:23:28 +0200
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gomJ75Gi5oBSFr+H9xOlbKC3gVCX2QqJ1p6jHhNiBfyDW/O7JR8Un7vVRryAmzpPLxw1ovTEUADH2JFU53/9vA==", "user"=>{"email"=>"jessicamaryleach@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2018-08-03 08:23:28.629742"], ["last_sign_in_at", "2018-08-03 07:51:31.378388"], ["sign_in_count", 21], ["updated_at", "2018-08-03 08:23:28.630781"], ["id", 1]]
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 59ms (ActiveRecord: 15.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-03 10:23:28 +0200
+Started GET "/lessons" for 127.0.0.1 at 2018-08-03 10:23:28 +0200
+Processing by LessonsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lessons"[0m
+3 lessons found
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lessons"[0m
+  Rendering lessons/index.html.erb within layouts/application
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lessons"[0m
+  [1m[36mLesson Load (0.3ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  Rendered lessons/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 253ms (Views: 240.1ms | ActiveRecord: 4.2ms)
+
+
