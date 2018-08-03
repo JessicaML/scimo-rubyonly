@@ -30,4 +30,5 @@ ruby 2.4.2
 
 * Live site
 
-https://young-shore-64363.herokuapp.com/
+https://secret-caverns-23158.herokuapp.com/lessons
+
