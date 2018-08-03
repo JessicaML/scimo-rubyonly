@@ -12,11 +12,9 @@ ruby '2.4.2'
 
 gem 'rails', '~> 5.1.4'
 
-gem 'pg', '~> 0.20'
 
 group :development, :test do
-  gem 'sqlite3', '1.3.8'
-  gem 'rspec-rails', '2.13.1'
+  gem 'sqlite3'
 
 end
 # Use sqlite3 as the database for Active Record
